@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css"></link>
+	</head>
+	<body>
+		<div id="TIA">Time Is Arbitrary</div>
+		<div id="clock">8888-88-88 X 88.88.88</div>
+		<div id="zonecontrol">
+			<button onclick="Timezone=smartMod(Timezone-1,timezones.length);">Prev</button>
+			<button onclick="Timezone=smartMod(Timezone+1,timezones.length);">Next</button>
+			Timezone: <span id="tzname">TIA</span> (TIA<span id="tzoffset">+0</span>)
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
