@@ -33,3 +33,7 @@ body{
 	position: absolute;
 	top: 530px;
 }
+ul{
+	list-style: disc;
+	text-align: left;
+}

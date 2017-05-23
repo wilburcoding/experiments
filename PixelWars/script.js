@@ -1,3 +1,6 @@
+version = "20170523a";
+setVersion("Pixel Wars v",version);
+
 var canvas = document.getElementById("theCanvas");
 var ctx = canvas.getContext("2d");
 

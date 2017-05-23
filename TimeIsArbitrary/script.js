@@ -1,3 +1,6 @@
+version = "20170523a";
+setVersion("Time Is Arbitrary v",version);
+
 var clock = document.getElementById("clock");
 
 //Warning: Only partially un-hardcoded!

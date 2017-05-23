@@ -1,0 +1,18 @@
+About: This folder contains scripts for use in multiple projects of mine. This includes the new tile engine for most of my canvas projects.
+
+== TileEngine.js ==
+
+----v201705----
+
+---23---
+--a--
++ Added versions and changelog.
+
+
+== CanvasEngine.js ==
+
+----v201705----
+
+---23---
+--a--
++ Added versions and changelog.

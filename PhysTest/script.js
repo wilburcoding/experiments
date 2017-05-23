@@ -1,3 +1,6 @@
+version = "20170523a";
+setVersion("Ye Olde Physics Test v",version);
+
 var canvas = document.getElementById("window");
 var xyz = canvas.getContext("2d");
 

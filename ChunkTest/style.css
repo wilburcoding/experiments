@@ -5,6 +5,10 @@
 	border-bottom: solid 2px black;
 }
 
+#version{
+	right: 100px;
+}
+
 /*.buttons{
 	position: absolute;
 	top: 540px;

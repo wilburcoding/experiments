@@ -1,3 +1,6 @@
+version = "20170523a";
+setVersion("Chunk Test v",version);
+
 COMMON.tileEngineMode = "chunks";
 COMMON.chunkSize = 100;
 

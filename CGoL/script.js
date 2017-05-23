@@ -1,3 +1,6 @@
+version = "20170523a";
+setVersion("Conway's Game of Life v",version);
+
 COMMON.tileEngineMode = "confined";
 
 function runCGoL(){

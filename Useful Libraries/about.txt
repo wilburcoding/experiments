@@ -1,1 +1,0 @@
-Scripts for use in multiple projects of mine. This includes the new tile engine for most of my canvas projects.

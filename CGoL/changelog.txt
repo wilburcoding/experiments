@@ -1,0 +1,7 @@
+About: A Conway's Game of Life simulator I made with the canvas while bored at school in 2016. Plenty of others have done this same thing better than me before, I just wanted to improve my javascript skills.
+
+----v201705----
+
+---23---
+--a--
++ Added version number & changelog.

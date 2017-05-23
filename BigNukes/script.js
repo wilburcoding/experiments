@@ -1,3 +1,6 @@
+version = "20170523a";
+setVersion("Mapperdonian Crazy Nuke Tech Simulator v",version);
+
 theBox = document.getElementById("cont");
 theCont = document.getElementById("contlist");
 toggleButton = document.getElementById("togglebutton");

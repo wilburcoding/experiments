@@ -1,3 +1,6 @@
+version = "20170523a";
+setVersion("TFOE Faction Simulator v",version);
+
 var BoxList = function(a){
 	this.add = function(b,c){
 		if(c === undefined){

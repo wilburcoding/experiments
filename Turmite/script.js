@@ -1,3 +1,6 @@
+version = "20170523a";
+setVersion("Monsoonjr99's Turmite v",version);
+
 var canvas = document.getElementById("window");
 var ctx = canvas.getContext("2d");
 
