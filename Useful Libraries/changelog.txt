@@ -1,5 +1,13 @@
 About: This folder contains scripts for use in multiple projects of mine. This includes the new tile engine for most of my canvas projects.
 
+== GreatFunctionLibrary.js ==
+
+----v201705----
+
+---24---
+--a--
++ Created library for lots of generally useful functions.
+
 == TileEngine.js ==
 
 ----v201705----
