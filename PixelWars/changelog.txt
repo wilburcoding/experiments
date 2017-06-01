@@ -1,4 +1,11 @@
-About: Another canvas experiment I made while bored. I still have not incorporated my new tile engine in this yet since this was made in 2015.
+About: Another canvas experiment I made while bored. I made this back in 2015 and have since incorporated my tile engine library.
+
+----v201706----
+
+---01---
+--a--
+* Reimplemented code with my libraries.
+
 
 ----v201705----
 
