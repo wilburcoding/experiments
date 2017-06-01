@@ -1,11 +1,13 @@
-version = "20170601a";
+version = "20170601b";
 setVersion("Pixel Wars v",version);
 
 COMMON.tileEngineMode = "confined";
 
 function Team(name,color){
-	this.name = name;
-	this.color = color;
+	teamColors[name] = color;
+	if(!teams.includes(name)){
+		teams.push(name);
+	}
 }
 
 function Tile(team,power){
@@ -13,18 +15,19 @@ function Tile(team,power){
 	this.power = power;
 }
 
-teams = [
-	new Team("red","#F00"),
-	new Team("blue","#00F"),
-	new Team("green","#0F0"),
-	new Team("yellow","#FF0")
-];
+teamColors = {};
+teams = [];
+
+Team("red","#F00");
+Team("blue","#00F");
+Team("green","#0F0");
+Team("yellow","#FF0");
 
 function render(){
 	draw.clear();
 	renderTileMap(
 		function(ct){
-			draw.rect(ct.x,ct.y,getTileSize(),getTileSize(),ct.data.team.color);
+			draw.rect(ct.x,ct.y,getTileSize(),getTileSize(),teamColors[ct.data.team]);
 		}
 	);
 }
@@ -44,7 +47,7 @@ function calcWar(){
 			var nghbrs = getNeighbors(C.x,C.y,true);
 			var rNeighbor = nghbrs[randNum(0,nghbrs.length-1)];
 			rNeighbor.tile = tileMap[rNeighbor.x][rNeighbor.y];
-			if(rNeighbor.tile.team.name==ct.data.team.name){
+			if(rNeighbor.tile.team==ct.data.team){
 				if(randNum(0,9)>5 || ct.data.power==0){
 					tileMap[C.x][C.y].power++;
 				}else{
@@ -78,8 +81,9 @@ function run(){
 }
 
 function lol(a,b,c){
+	Team(a,b);
 	for(lel=0;lel<randNum(16,21);lel++){
-		tileMap[randNum(0,canvasWidthInTiles()-1)][randNum(0,canvasHeightInTiles()-1)] = new Tile(new Team(a,b),c);
+		tileMap[randNum(0,canvasWidthInTiles()-1)][randNum(0,canvasHeightInTiles()-1)] = new Tile(a,c);
 	}
 }
 
