@@ -2,6 +2,12 @@ About: This folder contains scripts for use in multiple projects of mine. This i
 
 == GreatFunctionLibrary.js ==
 
+----v201707----
+
+---13---
+--a--
++ Added sumArrThru, logRand, and ClockCalendar.
+
 ----v201705----
 
 ---24---
