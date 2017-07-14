@@ -1,4 +1,4 @@
-version = "20170523a";
+version = "20170714a";
 setVersion("Conway's Game of Life v",version);
 
 COMMON.tileEngineMode = "confined";

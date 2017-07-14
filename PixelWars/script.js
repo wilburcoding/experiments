@@ -1,4 +1,4 @@
-version = "20170601b";
+version = "20170714a";
 setVersion("Pixel Wars v",version);
 
 COMMON.tileEngineMode = "confined";

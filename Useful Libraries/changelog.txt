@@ -1,32 +1,49 @@
 About: This folder contains scripts for use in multiple projects of mine. This includes the new tile engine for most of my canvas projects.
 
-== GreatFunctionLibrary.js ==
+== UsefulStuffLibrary.js ==    > Generally useful functions and stuff.
 
-----v201707----
+07/14/2017-present -- v1.x:
+    07/14/2017 -- v1.0:
+      * Changed version numbering.
+      * Renamed from GreatFunctionLibrary to UsefulStuffLibrary.
+      * From now on making new files for each version to reduce compatibility issues
+        in experiments. Will delete old versions once there are no more experiments
+        on said versions.
 
----13---
---a--
-+ Added sumArrThru, logRand, and ClockCalendar.
+07/13/2017-07/14/2017 -- v201707x:
+    07/13/2017 -- v20170713a:
+      + Added sumArrThru, logRand, and ClockCalendar.
 
-----v201705----
-
----24---
---a--
-+ Created library for lots of generally useful functions.
-
-== TileEngine.js ==
-
-----v201705----
-
----23---
---a--
-+ Added versions and changelog.
+05/24/2017-07/13/2017 -- v201705x:
+    05/24/2017 -- v20170524a:
+      + Created library for lots of generally useful functions.
 
 
-== CanvasEngine.js ==
 
-----v201705----
+== TileEngine.js ==    > Implements a tile engine on a canvas.
 
----23---
---a--
-+ Added versions and changelog.
+07/14/2017-present -- v1.x:
+    07/14/2017 -- v1.0:
+      * Changed version numbering.
+      * From now on making new files for each version to reduce compatibility issues
+        in experiments. Will delete old versions once there are no more experiments
+        on said versions.
+
+05/23/2017-07/14/2017 -- v201705x:
+    05/23/2017 -- v20170523a:
+      + Added versions and changelog.
+
+
+
+== CanvasEngine.js ==    > Useful canvas tools.
+
+07/14/2017-present -- v1.x:
+    07/14/2017 -- v1.0:
+      * Changed version numbering.
+      * From now on making new files for each version to reduce compatibility issues
+        in experiments. Will delete old versions once there are no more experiments
+        on said versions.
+
+05/23/2017-07/14/2017 -- v201705x:
+    05/23/2017 -- v20170523a:
+      + Added versions and changelog.
