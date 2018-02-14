@@ -2,48 +2,32 @@ About: This folder contains scripts for use in multiple projects of mine. This i
 
 == UsefulStuffLibrary.js ==    > Generally useful functions and stuff.
 
-07/14/2017-present -- v1.x:
-    07/14/2017 -- v1.0:
-      * Changed version numbering.
+v20170714a:
       * Renamed from GreatFunctionLibrary to UsefulStuffLibrary.
       * From now on making new files for each version to reduce compatibility issues
         in experiments. Will delete old versions once there are no more experiments
         on said versions.
-
-07/13/2017-07/14/2017 -- v201707x:
-    07/13/2017 -- v20170713a:
+v20170713a:
       + Added sumArrThru, logRand, and ClockCalendar.
-
-05/24/2017-07/13/2017 -- v201705x:
-    05/24/2017 -- v20170524a:
+v20170524a:
       + Created library for lots of generally useful functions.
-
 
 
 == TileEngine.js ==    > Implements a tile engine on a canvas.
 
-07/14/2017-present -- v1.x:
-    07/14/2017 -- v1.0:
-      * Changed version numbering.
+v20170714a:
       * From now on making new files for each version to reduce compatibility issues
         in experiments. Will delete old versions once there are no more experiments
         on said versions.
-
-05/23/2017-07/14/2017 -- v201705x:
-    05/23/2017 -- v20170523a:
+v20170523a:
       + Added versions and changelog.
-
 
 
 == CanvasEngine.js ==    > Useful canvas tools.
 
-07/14/2017-present -- v1.x:
-    07/14/2017 -- v1.0:
-      * Changed version numbering.
+v20170714a:
       * From now on making new files for each version to reduce compatibility issues
         in experiments. Will delete old versions once there are no more experiments
         on said versions.
-
-05/23/2017-07/14/2017 -- v201705x:
-    05/23/2017 -- v20170523a:
+v20170523a:
       + Added versions and changelog.
