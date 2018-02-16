@@ -1,4 +1,4 @@
-version = "20180216a";
+version = "20180216b";
 setVersion("Gravity Bubbles v",version);
 
 bubbles=[];
