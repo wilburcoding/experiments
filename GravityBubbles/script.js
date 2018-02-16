@@ -58,6 +58,8 @@ function RUN(){
 		bubbles[i].vel.y += rVector.y;
 	}
 	for(var i=0;i<bubbles.length;i++){
+		bubbles[i].vel.x *= (Math.abs(bubbles[i].vel.x)>40?0.75:1);
+		bubbles[i].vel.y *= (Math.abs(bubbles[i].vel.y)>40?0.75:1);
 		bubbles[i].pos.x += bubbles[i].vel.x;
 		bubbles[i].pos.y += bubbles[i].vel.y;
 		if(isNaN(bubbles[i].pos.x)||isNaN(bubbles[i].pos.y)){
