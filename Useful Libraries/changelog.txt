@@ -25,6 +25,9 @@ v20170523a:
 
 == CanvasEngine.js ==    > Useful canvas tools.
 
+v20180216a:
+      + Stroke render for rectangles and circles.
+      + Coordinate object constructor w/ Pythagorean distance calculation.
 v20170714a:
       * From now on making new files for each version to reduce compatibility issues
         in experiments. Will delete old versions once there are no more experiments
