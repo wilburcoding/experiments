@@ -1,0 +1,4 @@
+About: Gravity Bubbles redone ... and more explosive
+
+v20181129a:
+    + Initial release
