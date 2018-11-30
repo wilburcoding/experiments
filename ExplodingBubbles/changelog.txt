@@ -1,4 +1,6 @@
 About: Gravity Bubbles redone ... and more explosive
 
+v20181130a:
+    + Added killer flares
 v20181129a:
     + Initial release

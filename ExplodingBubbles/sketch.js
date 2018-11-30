@@ -1,4 +1,4 @@
-const VERSION = "20181129a";
+const VERSION = "20181130a";
 
 function setup() {
     setVersion("Exploding Bubbles v",VERSION);
@@ -44,6 +44,7 @@ function draw() {
         let p3y = fooVec.y;
         triangle(p1x,p1y,p2x,p2y,p3x,p3y);
         fill(cl);
+        if(f.killer) fill(255,0,0);
         ellipse(p.x,p.y,4);
     }
     for(let i=circles.length-1;i>=0;i--){
@@ -57,6 +58,7 @@ function draw() {
         if(random()<0.2) flares.push(new Flare(random(width),0,random(1,5),color(random(255),random(255),random(255)),PI/2));
         if(random()<0.00045) raining = false;
     }else if(random()<0.0001) raining = true;
+    if(random()<0.0002) flares.push(new Flare(random(width),random(height),5,color(random(255),random(255),random(255)),undefined,true));
 }
 
 class Circle{
@@ -67,6 +69,7 @@ class Circle{
         this.pos = createVector(x,y);
         this.vel = p5.Vector.random2D().mult(random(1,4));
         this.color = color(random(255),random(255),random(255));
+        this.killer = false;
         this.dead = false;
     }
     
@@ -103,13 +106,13 @@ class Circle{
             }
         }
         let s = r/sqrt(width*height);
-        if(random()<pow(s,3.5)){
+        if(random()<pow(s,3.5) || this.killer){
             let n = 0;
             while(n<r){
                 let l = r-n;
                 let m = random(1,5);
                 m = min(l,m);
-                flares.push(new Flare(p.x,p.y,m,this.color));
+                flares.push(new Flare(p.x,p.y,m,this.color,undefined,this.killer));
                 n += m;
             }
             this.dead = true;
@@ -123,8 +126,9 @@ class Circle{
                 let g = pow(0.6,d1)*0.05;
                 v.x = lerp(v.x,f.vel.x,g);
                 v.y = lerp(v.y,f.vel.y,g);
-                if(d<0 && random()<0.03){
+                if(d<0 && (random()<0.03 || f.killer)){
                     this.r += f.m;
+                    if(f.killer) this.killer = true;
                     f.dead = true;
                 }
             }
@@ -133,7 +137,7 @@ class Circle{
 }
 
 class Flare{
-    constructor(x,y,m,c,a){
+    constructor(x,y,m,c,a,k){
         this.pos = createVector(x,y);
         if(a!==undefined){
             this.vel = createVector(3);
@@ -141,6 +145,7 @@ class Flare{
         }else this.vel = p5.Vector.random2D().mult(3);
         this.m = m;
         this.color = c;
+        this.killer = k;
         this.dead = false;
     }
     
