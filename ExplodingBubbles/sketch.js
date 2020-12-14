@@ -570,7 +570,7 @@ class ModernDebris{
                 }
             }
             for(let i=0;i<modern_debris.length;i++){
-                let d = modern_debris[i]
+                let d = modern_debris[i];
                 if(!d.dead && d !== this && d.m+this.m <= MAX_DEBRIS_SIZE){
                     let dist = d.pos.dist(p);
                     if(dist < (r + d.r())/2 && d.m > this.m){
