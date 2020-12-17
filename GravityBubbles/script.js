@@ -1,3 +1,5 @@
+// WTF did 18-year-old me code!?
+
 version = "20180216b";
 setVersion("Gravity Bubbles v",version);
 
@@ -27,6 +29,7 @@ function render(){
 	}
 }
 
+// WHAT IN TARNATION IS THIS
 function unitVector(x,y,u){
 	return new Coord(Math.cos(Math.atan(y/x))*Math.sign(x)*(u?u:(u==0?0:1)),Math.sin(Math.atan(y/x))*(Math.sign(x)==0?1:Math.sign(x))*(u?u:(u==0?0:1)));
 }
