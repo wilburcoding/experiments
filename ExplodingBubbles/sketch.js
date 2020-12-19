@@ -1,11 +1,12 @@
 // This code is total trash but eh
 
-const VERSION = "20201214a";
+const VERSION = "--DEV--";
 
 const HIVE_SIZE = 30;
 const BEE_MASS = 3;
 const MAX_ARMOR = 50;
 const MAX_DEBRIS_SIZE = 150;
+const LIGHTNING_DURATION = 30;
 
 function setup() {
     setVersion("Exploding Bubbles v",VERSION);
@@ -16,6 +17,7 @@ function setup() {
     hives = [];
     bees = [];
     modern_debris = [];
+    lightning_bolts = [];
     raining = false;
     fooVec = createVector();
 }
@@ -110,6 +112,23 @@ function draw() {
         endShape(CLOSE);
         pop();
     }
+    for(let l of lightning_bolts){
+        l.update();
+        push();
+        fill(255, 255, 100, 180);
+        stroke(255, 255, 100, 100);
+        strokeWeight(8);
+        beginShape();
+        vertex(l.path[0].x, l.path[0].y);
+        for(let i = 1; i < l.path.length; i++)
+            vertex(l.path[i].x - 5 - i*2, l.path[i].y);
+        vertex(l.path[l.path.length - 1].x - 5 - (l.path.length-1)*2, -10);
+        vertex(l.path[l.path.length - 1].x + 5 + (l.path.length-1)*2, -10);
+        for(let i = l.path.length - 1; i >= 1; i--)
+            vertex(l.path[i].x + 5 + i*2, l.path[i].y);
+        endShape(CLOSE);
+        pop();
+    }
     for(let i=circles.length-1;i>=0;i--){
         if(circles[i].dead) circles.splice(i,1);
     }
@@ -124,6 +143,9 @@ function draw() {
     }
     for(let i=modern_debris.length-1;i>=0;i--){
         if(modern_debris[i].dead) modern_debris.splice(i,1);
+    }
+    for(let i=lightning_bolts.length-1;i>=0;i--){
+        if(lightning_bolts[i].dead) lightning_bolts.splice(i,1);
     }
     if(circles.length<40 && random()<0.005) circles.push(new Circle());
     if(raining){
@@ -347,6 +369,10 @@ class Hive{
             }
             hives.push(new Hive(this.pos.x,this.pos.y-1,this.m/2,this.color,false,armor));
             this.m /= 2;
+        }
+        if(raining && this.armor && random() < 0.0002){
+            lightning_bolts.push(new Lightning(this.pos.x, this.pos.y));
+            // here be dragons
         }
         if(random()<0.15) this.m -= random(0.2,1);
         if(this.m<5){
@@ -590,6 +616,46 @@ class ModernDebris{
             this.rot = this.bee.angle;
             this.pos.add(-(13+r)*cos(this.rot),-(13+r)*sin(this.rot));
         }
+        if(raining && random() < 0.0002){
+            lightning_bolts.push(new Lightning(this.pos.x, this.pos.y));
+            if(this.m > 5){
+                let m1 = random(0.1,0.35)*this.m;
+                let m2 = random(0.1,0.35)*this.m;
+                modern_debris.push(new ModernDebris(this.pos.x,this.pos.y,m1));
+                modern_debris.push(new ModernDebris(this.pos.x,this.pos.y,m2));
+                this.m -= m1 + m2;
+            }
+            if(this.bee){
+                this.bee.dead = true;
+                this.bee = undefined;
+            }
+        }
+    }
+}
+
+class Lightning{
+    constructor(x,y){
+        this.age = 0;
+        this.path = [];
+        this.dead = false;
+
+        this.path.push(createVector(x, y));
+        y = lerp(y, 0, random(0.2,0.7));
+        for(let i = 0; i < floor(random(2,4)); i++){
+            x += random(-80, 80);
+            y += random(-40, -100);
+            if(y <= 0)
+                break;
+            this.path.push(createVector(x, y));
+        }
+        x += random(-80, 80);
+        this.path.push(createVector(x, 0));
+    }
+
+    update(){
+        this.age++;
+        if(this.age > LIGHTNING_DURATION)
+            this.dead = true;
     }
 }
 
