@@ -1,7 +1,7 @@
 About: A tool for making hypothetical tropical cyclone tracks (WIP)
-v20200418c:
+v20200418d:
     + More categories: 
-        > press "6", "7", "8", "9", or press "0" (category 10)
+        > press "6", "7", "8", "9", "y" (hypercane) , or press "0" (category 10)
 v20200418a:
     + Support for multiple tracks added
         > Control-click to begin a new track
