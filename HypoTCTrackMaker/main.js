@@ -5,7 +5,7 @@ const WIDTH = 960;
 const HEIGHT = 540;
 const MAP_WIDTH = 3000;
 const MAP_HEIGHT = MAP_WIDTH/2;
-const COLORS = ['#5ebaff','#00faf4','#ffffcc','#ffe775','#ffc140','#ff8f20','#ff6060','#FF0097','#FF00D4','#FB00FF','#D500FF','#AA00FF'];
+const COLORS = ['#5ebaff','#00faf4','#ffffcc','#ffe775','#ffc140','#ff8f20','#ff6060','#FF0097','#FF00D4','#FB00FF','#D500FF','#AA00FF','#000000'];
 
 var loadedMapImg,
     mapImg,
@@ -264,6 +264,8 @@ function keyTyped(){
         categoryToPlace = 10;
     else if(key === '0')
         categoryToPlace = 11;
+    else if(key === 'y')
+        categoryToPlace = 12;
     else return;
     return false;
 }
