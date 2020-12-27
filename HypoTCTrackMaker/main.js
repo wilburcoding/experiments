@@ -5,7 +5,7 @@ const WIDTH = 960;
 const HEIGHT = 540;
 const MAP_WIDTH = 3000;
 const MAP_HEIGHT = MAP_WIDTH/2;
-const COLORS = ['#5ebaff','#00faf4','#ffffcc','#ffe775','#ffc140','#ff8f20','#ff6060'];
+const COLORS = ['#5ebaff','#00faf4','#ffffcc','#ffe775','#ffc140','#ff8f20','#ff6060','#FE00DB'];
 
 var loadedMapImg,
     mapImg,
@@ -102,7 +102,7 @@ function draw(){
         fill(0);
         textAlign(CENTER,CENTER);
         textSize(12);
-        text('TEST',WIDTH/2,(HEIGHT-WIDTH/2)/2);
+        text('Hurricane Track',WIDTH/2,(HEIGHT-WIDTH/2)/2);
     }
     else{
         textSize(48);
@@ -254,6 +254,8 @@ function keyTyped(){
         typeToPlace = 1;
     else if(key === 'x')
         typeToPlace = 2;
+    else if(key === '6')
+        categoryToPlace = 7;
     else return;
     return false;
 }
