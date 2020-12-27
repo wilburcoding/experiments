@@ -13,7 +13,7 @@ var mWidth,
     nests;
 
 function setup(){
-    setVersion("M99's Ant Farm v",VERSION);
+    setVersion("Wilburcoding's Ant Farm v",VERSION);
 
     createCanvas(document.body.clientWidth, document.body.clientHeight);
     cellMap = [];
