@@ -85,7 +85,7 @@ class Cell{
                 }
                 if(c.nest){
                     fill(180,85,20);
-                    if(c.nest===c.nest.hive.crownNest()) stroke(0,255,0);
+                    if(c.nest===c.nest.hive.crownNest()) stroke(0,0,255);
                     if(c.nest.size===3) triangle(12,5,19,19,5,19);
                     else if(c.nest.size===2) triangle(12,7,17,17,7,17);
                     else triangle(12,9,15,15,9,15);
