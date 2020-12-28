@@ -1,4 +1,4 @@
-version = "20170523a";
+version = "20170523b";
 setVersion("Mapperdonian Crazy Nuke Tech Simulator v",version);
 
 theBox = document.getElementById("cont");
