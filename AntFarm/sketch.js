@@ -1,6 +1,6 @@
-const VERSION = "20190731a";
+const VERSION = "20190731b";
 
-const CELL_SIZE = 24;
+const CELL_SIZE = 200;
 const LAND_NOISE_ZOOM = 12.5;
 const ANT_START_FOOD = 100;
 
