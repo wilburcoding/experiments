@@ -110,13 +110,13 @@ function styleText(txt,cl){
 
 function RUN(){
     var leDate = styleText(months[month].name + " " + day + ", " + year,"boldtext");
-    if(Math.random()<0.0007 || nations.length<1){
+    if(Math.random()<0.002 || nations.length<1){
         var newNation = new Nation();
         nations.push(newNation);
         writeToCont(leDate + ": The " + styleText(newNation.name,"bluetext") + " has been " + styleText("founded","greentext") + ".");
     }else{
         for(var id=0;id<nations.length;id++){
-            if(Math.random()<0.005){
+            if(Math.random()<0.5){
                 var leNation = nations[id];
                 leNation.tech++;
                 writeToCont(leDate + ": The " + styleText(leNation.name,"bluetext") + " has improved their bomb tech to " + styleText(getTechName(leNation.tech),"redtext"));
@@ -151,15 +151,15 @@ function resetSim(){
 
 function buttonPress(doWhat){
 	if(doWhat==="toggle"){
-		if(toggleButton.innerHTML==="Start"){
+		if(toggleButton.innerHTML==="Start the interesting bomb sim"){
 			toggleButton.innerHTML = "Stop";
 			RUN();
-		}else if(toggleButton.innerHTML==="Stop"){
-			toggleButton.innerHTML = "Start";
+		}else if(toggleButton.innerHTML==="Stop the interesting bomb sim"){
+			toggleButton.innerHTML = "Start the interesting bomb sim";
 			stopDis();
 		}
 	}else if(doWhat==="reset"){
-		toggleButton.innerHTML = "Start";
+		toggleButton.innerHTML = "Start the interesting bomb sim";
 		resetSim();
 	}
 }
