@@ -151,15 +151,15 @@ function resetSim(){
 
 function buttonPress(doWhat){
 	if(doWhat==="toggle"){
-		if(toggleButton.innerHTML==="Start the interesting bomb sim"){
+		if(toggleButton.innerHTML==="Start"){
 			toggleButton.innerHTML = "Stop";
 			RUN();
-		}else if(toggleButton.innerHTML==="Stop the interesting bomb sim"){
-			toggleButton.innerHTML = "Start the interesting bomb sim";
+		}else if(toggleButton.innerHTML==="Stop"){
+			toggleButton.innerHTML = "Start";
 			stopDis();
 		}
 	}else if(doWhat==="reset"){
-		toggleButton.innerHTML = "Start the interesting bomb sim";
+		toggleButton.innerHTML = "Start";
 		resetSim();
 	}
 }
