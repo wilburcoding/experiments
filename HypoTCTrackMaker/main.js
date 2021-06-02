@@ -1,5 +1,5 @@
 const TITLE = 'Hypo TC Track Maker';
-const VERSION = '20200418i';
+const VERSION = '20200418j';
 var numberofdots=0;
 const WIDTH = 960;
 const HEIGHT = 540;
