@@ -166,9 +166,10 @@ function mousePressed(){
 function mouseReleased(){
     if(mouseButton === LEFT){
         if(mouseMode === 0){
-            if(keyIsDown(CONTROL))
+            if(keyIsDown(CONTROL)){
                 selectedTrack = undefined;
                 numberofstorms++;
+            }
             if(!selectedTrack){
                 selectedTrack = [];
                 tracks.push(selectedTrack);
