@@ -272,7 +272,7 @@ function keyTyped(){
     else if(key === 'y')
         categoryToPlace = 12;
     else if(key === 'z')
-        alert("Number of Storms: " + numberofstorms);
+        alert("Number of Storms: " + numberofstorms + ", Number of Dots: " + numberofdots);
     else return;
     return false;
 }
