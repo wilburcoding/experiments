@@ -189,6 +189,7 @@ function mouseReleased(){
                             if(selectedTrack === tracks[i])
                                 selectedTrack = undefined;
                             tracks.splice(i,1);
+                            numberofstorms--;
                         }
                         else
                             selectedTrack = tracks[i];
