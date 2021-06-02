@@ -1,5 +1,5 @@
 const TITLE = 'Hypo TC Track Maker';
-const VERSION = '20200418h';
+const VERSION = '20200418i';
 var numberofdots=0;
 const WIDTH = 960;
 const HEIGHT = 540;
@@ -174,6 +174,7 @@ function mouseReleased(){
                 selectedTrack = [];
                 tracks.push(selectedTrack);
             }
+            numberofdots++;
             selectedTrack.push(new TrackPoint(mouseLong(),mouseLat(),categoryToPlace,typeToPlace));
         }else if(mouseMode === 2){
             selectedDot.long = mouseLong();
@@ -193,6 +194,7 @@ function mouseReleased(){
                         }
                         else
                             selectedTrack = tracks[i];
+                        numberofdots--;
                         done = true;
                     }
                 }
