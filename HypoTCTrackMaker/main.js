@@ -1,6 +1,6 @@
 const TITLE = 'Hypo TC Track Maker';
 const VERSION = '20200418h';
-
+var numberofdots=0;
 const WIDTH = 960;
 const HEIGHT = 540;
 const MAP_WIDTH = 3000;
@@ -270,7 +270,7 @@ function keyTyped(){
     else if(key === 'y')
         categoryToPlace = 12;
     else if(key === 'z')
-        alert("Number of Storms" + numberofstorms);
+        alert("Number of Storms: " + numberofstorms);
     else return;
     return false;
 }
