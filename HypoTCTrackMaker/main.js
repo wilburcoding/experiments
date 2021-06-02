@@ -6,7 +6,7 @@ const HEIGHT = 540;
 const MAP_WIDTH = 3000;
 const MAP_HEIGHT = MAP_WIDTH/2;
 const COLORS = ['#5ebaff','#00faf4','#ffffcc','#ffe775','#ffc140','#ff8f20','#ff6060','#FF0097','#FF00D4','#FB00FF','#D500FF','#AA00FF','#9B9B8B'];
-
+var numberofstorms = 0;
 var loadedMapImg,
     mapImg,
     panLocation,
@@ -146,7 +146,7 @@ function mousePressed(){
         if(keyIsDown(SHIFT)){
             mouseMode = 3;
         }else{
-            mouseMode = 0;
+            mouseMode = 0;Fc
             for(let i=tracks.length-1;i>=0;i--){
                 for(let j=tracks[i].length-1;j>=0;j--){
                     let d = tracks[i][j];
@@ -168,6 +168,7 @@ function mouseReleased(){
         if(mouseMode === 0){
             if(keyIsDown(CONTROL))
                 selectedTrack = undefined;
+                numberofstorms++;
             if(!selectedTrack){
                 selectedTrack = [];
                 tracks.push(selectedTrack);
@@ -266,6 +267,8 @@ function keyTyped(){
         categoryToPlace = 11;
     else if(key === 'y')
         categoryToPlace = 12;
+    else if(key === 'z')
+        alert("Number of Storms" + numberofstorms);
     else return;
     return false;
 }
