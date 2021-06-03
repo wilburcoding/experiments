@@ -1,8 +1,8 @@
 const TITLE = 'Hypo TC Track Maker';
 const VERSION = '20200418k';
 var numberofdots=0;
-const WIDTH = 960;
-const HEIGHT = 540;
+const WIDTH = 1260;
+const HEIGHT = 640;
 const MAP_WIDTH = 5000;
 const MAP_HEIGHT = 1580;
 const COLORS = ['#5ebaff','#00faf4','#ffffcc','#ffe775','#ffc140','#ff8f20','#ff6060','#FF0097','#FF00D4','#FB00FF','#D500FF','#AA00FF','#9B9B8B'];
