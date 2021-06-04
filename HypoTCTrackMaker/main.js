@@ -1,10 +1,10 @@
 const TITLE = 'Hypo TC Track Maker';
 const VERSION = '20200418k';
 var numberofdots=0;
-const WIDTH = 1280;
-const HEIGHT = 620;
+const WIDTH = 1300;
+const HEIGHT = 610;
 const MAP_WIDTH = 5000;
-const MAP_HEIGHT = 1580;
+const MAP_HEIGHT = 1570;
 const COLORS = ['#5ebaff','#00faf4','#ffffcc','#ffe775','#ffc140','#ff8f20','#ff6060','#FF0097','#FF00D4','#FB00FF','#D500FF','#AA00FF','#9B9B8B'];
 var numberofstorms = 0;
 var loadedMapImg,
@@ -146,7 +146,7 @@ function mousePressed(){
         if(keyIsDown(SHIFT)){
             mouseMode = 3;
         }else{
-            mouseMode = 0;Fc
+            mouseMode = 0;
             for(let i=tracks.length-1;i>=0;i--){
                 for(let j=tracks[i].length-1;j>=0;j--){
                     let d = tracks[i][j];
